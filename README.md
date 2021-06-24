@@ -2,6 +2,7 @@
 Qbic is a Minecraft servers manager written in Java, created with the main goal to pass the OOP exam in mind; but also to provide a free alternative to [Multicraft](https://multicraft.org), which can be very expensive for somebody who's just beginning to create their own Minecraft network.
 
 
+
 # Architecture description and features
 Qbic is mainly based on *two* actors: the authserver and the instance.<br>
 The authserver, as the name suggests, has the role of authenticating and validating users that make requests to the various instances, while the instances have the role of deploying and managing Minecraft servers.<br>
@@ -32,7 +33,7 @@ Example `config.json`:
 Note that each node is not only independent from the others, but also independent from the authserver. This is all the configuration you need to make an instance "talk" to the authserver (and back), the only thing you have to verify is the connectivity between authserver and instances;<br><br>
 b) At boostrap time, the authserver will send to the specified nodes its public key (via HTTP);
 <br><br>
-c) Before initiating a request to a certain instance, a user **must** obtain a JWT token from the authserver with a simple [login request](#login_request);
+c) Before initiating a request to a certain instance, a user **must** obtain a JWT token from the authserver (signed with the authserver's private key) with a simple [login request](#login_request);
 <br><br>
 d) The JWT token will look like this: 
 ```
@@ -47,7 +48,7 @@ d) The JWT token will look like this:
   "username": "root"
 }
 ```
-This is all an instance needs to know about a user.<br>
+This is all an instance needs to know about a user.
 There's a lot more to know tho, dig deeper into configuration and stuff for more information.<br>
 
 ## Installation (never tested on Windows)
@@ -64,9 +65,8 @@ and basically, you're good to go! <br>
 `java -jar qbic-client.jar`
 
 ### Qbic authserver
-For the authserver, make sure you have whichever `mysql-server` version after 5.7:<br>
-`sudo apt install mysql-server`.
-Generate a MySQL user and database.<br>
+For the authserver, make sure you have whichever `mysql-server` version after 5.7 and generate a MySQL user and database:<br>
+`sudo apt install mysql-server`<br>
 **Important**: if you're running MySQL server >= 8.x make sure you set the authentication mode to `native` to the user you're using for Qbic, since `jasync-sql` has some troubles with other modes. [Here's how to do it.](https://medium.com/@crmcmullen/how-to-run-mysql-8-0-with-native-password-authentication-502de5bac661)
 Then, download the latest Qbic authserver release:<br>
 `wget https://static.macca.cloud/qbic/authserver/lastest.jar -O qbic-authserver.jar`<br>
