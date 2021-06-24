@@ -1,6 +1,55 @@
 # Qbic - manage your Minecraft servers with ease!
 Qbic is a Minecraft servers manager written in Java, created with the main goal to pass the OOP exam in mind; but also to provide a free alternative to [Multicraft](https://multicraft.org), which can be very expensive for somebody who's just beginning to create their own Minecraft network.
 
+
+# Architecture description and features
+Qbic is mainly based on *two* actors: the authserver and the instance.<br>
+The authserver, as the name suggests, has the role of authenticating and validating users that make requests to the various instances, while the instances have the role of deploying and managing Minecraft servers.<br>
+Both the authserver and the instances expose an HTTP REST API with various useful methods.
+<br>
+To initiate certain actions, users *must* provide a JWT token to the instance in question which, you guessed it, is provided provided by the authserver.
+<br>
+Instances are connected to a certain authserver and can verify and approve requests via the authentication schema described down below.
+
+a) In the authserver's `config.json` file (see [its page](https://github.com/lugli-maccaferri/qbic-demo/tree/main/authserver)) look for the `nodes` array:<br>
+```
+"nodes:" []
+```
+This object contains all the nodes (instances) that are connected to the authserver. The authserver will then send them its public key which will be used to verify the JWT token provided by the authserver.<br>
+Example `config.json`:
+```
+"nodes":  [  
+	{  
+		"name": "my fantastic server",  
+		"host": "https://qbic.macca.cloud"  
+	},  
+	{  
+		"name": "my home server",  
+		"host": "http://10.8.0.2:3001"  
+	}  
+]
+```
+Note that each node is not only independent from the others, but also independent from the authserver. This is all the configuration you need to make an instance "talk" to the authserver (and back), the only thing you have to verify is the connectivity between authserver and instances;<br><br>
+b) At boostrap time, the authserver will send to the specified nodes its public key (via HTTP);
+<br><br>
+c) Before initiating a request to a certain instance, a user **must** obtain a JWT token from the authserver with a simple [login request](#login_request);
+<br><br>
+d) The JWT token will look like this: 
+```
+{
+  "is_admin": "1",
+  "user_id": "cc178971-eb9f-416c-b5c3-6c9b7ff5366e",
+  "edit_fs": "1",
+  "iss": "qbic",
+  "edit_others": "1",
+  "exp": 1624560859,
+  "iat": 1624553659,
+  "username": "root"
+}
+```
+This is all an instance needs to know about a user.<br>
+There's a lot more to know tho, dig deeper into configuration and stuff for more information.<br>
+
 ## Installation (never tested on Windows)
 Make sure you have **at least** Java 14 installed<br>
 `sudo apt install openjdk-14-jre`
