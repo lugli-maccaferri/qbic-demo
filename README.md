@@ -3,7 +3,7 @@ Qbic is a Minecraft servers manager written in Java, created with the main goal 
 
 
 
-# Architecture description and features
+# Authentication architecture description
 Qbic is mainly based on *two* actors: the authserver and the instance.<br>
 The authserver, as the name suggests, has the role of authenticating and validating users that make requests to the various instances, while the instances have the role of deploying and managing Minecraft servers.<br>
 Both the authserver and the instances expose an HTTP REST API with various useful methods.
