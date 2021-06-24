@@ -74,9 +74,5 @@ Then, download the latest Qbic authserver release:<br>
 and, again, everything is basically ready out of the box.
 
 # Dig deeper into configuration and stuff
-- Qbic instance
-- Qbic authserver
-
-# REST APIs
-- Qbic instance
-- Qbic authserver
+- [Qbic authserver](https://github.com/lugli-maccaferri/qbic-demo/tree/main/authserver)
+- [Qbic instance](https://github.com/lugli-maccaferri/qbic-demo/tree/main/instance)
