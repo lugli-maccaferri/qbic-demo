@@ -18,7 +18,7 @@ a) In the authserver's `config.json` file (see [its page](https://github.com/lug
 "nodes:" []
 ```
 This object contains all the nodes (instances) that are connected to the authserver. The authserver will then send them its public key which will be used to verify the JWT token provided by the authserver.<br>
-Example `config.json`:
+For example:
 ```
 "nodes":  [  
 	{  
