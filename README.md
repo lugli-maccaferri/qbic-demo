@@ -8,9 +8,10 @@ Qbic is mainly based on *two* actors: the authserver and the instance.<br>
 The authserver, as the name suggests, has the role of authenticating and validating users that make requests to the various instances, while the instances have the role of deploying and managing Minecraft servers.<br>
 Both the authserver and the instances expose an HTTP REST API with various useful methods.
 <br>
-To initiate certain actions, users *must* provide a JWT token to the instance in question which, you guessed it, is provided provided by the authserver.
+To initiate certain actions, users *must* provide a JWT token to the instance in question which, you guessed it, is provided and signed by the authserver with its  private key.
 <br>
 Instances are connected to a certain authserver and can verify and approve requests via the authentication schema described down below.
+<br> 
 
 a) In the authserver's `config.json` file (see [its page](https://github.com/lugli-maccaferri/qbic-demo/tree/main/authserver)) look for the `nodes` array:<br>
 ```
