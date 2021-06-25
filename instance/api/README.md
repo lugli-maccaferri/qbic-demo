@@ -12,5 +12,5 @@ Example (pseudo http client setup):
 ```
 
 # API methods
-- [`/auth`](_auth)
--  [`/server`](_server)
+- [`/auth`](https://github.com/lugli-maccaferri/qbic-demo/blob/main/instance/api/auth.md)
+-  [`/server`](https://github.com/lugli-maccaferri/qbic-demo/blob/main/instance/api/server.md)
