@@ -98,3 +98,26 @@ None.
 }
 ```
 **Note**: `content` is the content of the file you're seeing. If the path is a directory (`is_directory: true`), `content` will contain the contents of such directory.
+
+<br>
+
+
+#### GET `/list`
+This request is used to list all the Minecraft servers that the current node is handling
+##### Parameters
+None.
+<br>
+
+##### Example response (success):
+```
+{
+  "servers": [
+    {
+      "owner": "cc178971-eb9f-416c-b5c3-6c9b7ff5366e",
+      "name": "serveruccio",
+      "id": "Nfb5Y71QtUDKyyaqEv0UxbRqYLVaF8zg"
+    }
+  ],
+  "success": true
+}
+```
