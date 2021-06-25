@@ -17,5 +17,4 @@ The configuration is much simpler, all you need to do is to specify the name of 
 # More stuff about instances
 Instances are meant to be as standalone and autonomous as possible. When you first start an instance an `sqlite3` database file will be created and initialized (TODO: upload the schema).
 <br>
-Once the instance has successfully started you can use the [REST API](#rest_api) and its methods simply providing the JWT in the `Authorization` header as a Bearer token.
-
+Once the instance has successfully started you can use the REST API and its methods simply providing the JWT in the `Authorization` header as a Bearer token (more info in the [dedicated page](https://github.com/lugli-maccaferri/qbic-demo/blob/main/instance/api/auth.md))
