@@ -3,7 +3,7 @@
 #### GET `/`
 This request is used to obtain info about the current JWT (basically user information).
 ##### Parameters
-None.<br>
+None.<br><br>
 Example response (success):
 ```
 {
