@@ -48,3 +48,26 @@ The response will be successful even if the server process encounters some sort 
 	success: true
 }
 ```
+<br>
+
+
+#### POST `/files/:id`
+This request is used to scan a server main folder given its id.
+<br>
+Basically you'll get the server root with its files.
+##### Parameters
+None.
+<br>
+
+##### Example response (success):
+```
+{
+	"is_directory": true,
+	"success": true,
+	"content": [
+		"eula.txt",
+		"server.jar",
+		"server.properties"
+	]
+}
+```
