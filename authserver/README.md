@@ -33,4 +33,4 @@ The configuration is pretty simple and self explanatory:
 I think you can guess what the `mysql` object is for and we already talked about the `nodes` section, so we can move on and discuss some other matters.
 
 
-# [Read the API docs for the authserver!](https://github.com/lugli-maccaferri/qbic-demo/blob/main/authserver/api.md)
+# [Read the API docs for the authserver!](https://github.com/lugli-maccaferri/qbic-demo/tree/main/authserver/api)
