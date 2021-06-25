@@ -71,3 +71,30 @@ None.
 	]
 }
 ```
+<br>
+
+#### POST `/files/:id/:path`
+This request is used to read a path inside the server root.<br>
+**Important**: the `path` parameter **must be the base64 encode** of the path you want to read.<br>
+For example: if the resource needed is `eula.txt`, the request URL must be <br>
+`/files/:id/ZXVsYS50eHQ=`.
+<br> As you can tell, the last parameter is the base64 encode of the string `eula.txt`.<br>
+If the file is inside a folder you just have to encode the full path.<br>
+For example:  if the resource needed is `eula.txt`,  in the folder `items` the request URL must be <br>
+`/files/:id/aXRlbXMvZXVsYS50eHQ=`, which is the base64 encode of `items/eula.txt`
+<br>
+If the requested resource is a directory, the response will contain a list of its files (similar to `/files/:id`)
+<br>
+##### Parameters
+None.
+<br>
+
+##### Example response (success):
+```
+{
+	"is_directory": false,
+	"success": true,
+	"content": "eula=true"
+}
+```
+**Note**: `content` is the content of the file you're seeing. If the path is a directory (`is_directory: true`), `content` will contain the contents of such directory.
