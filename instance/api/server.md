@@ -33,6 +33,7 @@ For example, if you upload a jar named `my-spigot.jar` and you want to use it fo
 }
 ```
 <br>
+
 #### POST `/start/:server_id`
 This request is used to start a server given its id (**note that the server id must be an URL parameter, not a body parameter**)
 ##### Parameters
