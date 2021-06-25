@@ -32,3 +32,17 @@ For example, if you upload a jar named `my-spigot.jar` and you want to use it fo
 	"success": true
 }
 ```
+#### POST `/start/:server_id`
+This request is used to start a server given its id (**note that the server id must be an URL parameter, not a body parameter**)
+##### Parameters
+None.
+<br>
+The response will be successful even if the server process encounters some sort of error, since the HTTP response reflects the status of the HTTP transaction (that's also done because the server runs parallel to the request, so the webserver doesn't have to wait the server to start - and potentially fail).
+<br>To check server health, take a look at /server/info/:id (you can also check console output via websocket).<br>
+
+##### Example response (success):
+```
+{
+	success: true
+}
+```
