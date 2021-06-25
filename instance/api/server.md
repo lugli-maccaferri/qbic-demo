@@ -121,3 +121,46 @@ None.
   "success": true
 }
 ```
+<br>
+
+#### GET `/info/:id`
+This request retrieves info from a server given its ID with the ([Minecraft query protocol](https://wiki.vg/Query))
+##### Parameters
+None.
+<br>
+
+##### Example response (success):
+```
+{
+  "motd": "A Minecraft Server",
+  "main_world": "world",
+  "success": true,
+  "max_players": 20,
+  "gamemode": "SMP",
+  "online_players": 0
+}
+```
+<br>
+
+
+#### POST `/send-command/:id`
+This request sends a command to aserver given its ID with the ([RCON protocol](https://developer.valvesoftware.com/wiki/Source_RCON_Protocol)).
+**Remember to omit the "/" then sending the command**
+
+##### Parameters
+|Name  |Type   | Description | Mandatory |
+|--|--| -- | -- |
+| `command ` | `string`  | A Minecraft command | ✅|
+
+<br>
+
+##### Example response (success):
+```
+{
+
+	"command_response": "Set the time to 1000",
+	"success": true
+
+}
+```
+(The command was `time set day`).
