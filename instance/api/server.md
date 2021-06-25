@@ -51,7 +51,7 @@ The response will be successful even if the server process encounters some sort 
 <br>
 
 
-#### POST `/files/:id`
+#### GET `/files/:id`
 This request is used to scan a server main folder given its id.
 <br>
 Basically you'll get the server root with its files.
@@ -73,7 +73,7 @@ None.
 ```
 <br>
 
-#### POST `/files/:id/:path`
+#### GET `/files/:id/:path`
 This request is used to read a path inside the server root.<br>
 **Important**: the `path` parameter **must be the base64 encode** of the path you want to read.<br>
 For example: if the resource needed is `eula.txt`, the request URL must be <br>
