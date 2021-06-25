@@ -164,3 +164,19 @@ This request sends a command to aserver given its ID with the ([RCON protocol](h
 }
 ```
 (The command was `time set day`).
+<br>
+
+
+#### POST `/stop/:id`
+This request stops a server given its ID.
+#### Parameters 
+None.
+<br>
+
+##### Example response (success):
+```
+{
+
+	"success": true
+}
+```
