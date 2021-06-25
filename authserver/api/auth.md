@@ -7,7 +7,7 @@ This request is used to obtain a signed JWT that you can then use to authorize r
 |--|--| -- | -- |
 | `username ` | `string`  | The user's username | ✅|
 | `password ` | `string`  | The user's password | ✅|
-Example response (success):
+##### Example response (success):
 ```
 {
     "success": true,
