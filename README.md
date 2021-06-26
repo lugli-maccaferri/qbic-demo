@@ -13,7 +13,7 @@ To initiate certain actions, users *must* provide a JWT token to the instance in
 Instances are connected to a certain authserver and can verify and approve requests via the authentication schema described down below.
 <br> 
 
-a) In the authserver's `config.json` file (see [its page](https://github.com/lugli-maccaferri/qbic-demo/tree/main/authserver)) look for the `nodes` array:<br>
+a) Look for the `nodes` array in the authserver's `config.json` file (see [its page](https://github.com/lugli-maccaferri/qbic-demo/tree/main/authserver)):<br>
 ```
 "nodes:" []
 ```
