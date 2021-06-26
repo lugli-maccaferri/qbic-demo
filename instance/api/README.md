@@ -1,5 +1,5 @@
 # Qbic instance REST API
-**Important**: provide the JWT with every request you make, because the instance needs to know who you are and which your permissions are!<br>
+**Important**: provide the JWT in every request you make, because the instance needs to know who you are and which your permissions are!<br>
 Once you make a login request to the authserver store the JWT you get from the response and send it in the `Authorization` header as a *bearer token*.
 <br>
 Example (pseudo http client setup):
