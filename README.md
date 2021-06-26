@@ -61,7 +61,6 @@ First, make sure you have `sqlite3` installed:<br>
 `sudo apt install sqlite3`<br>
 Then, download the latest Qbic client release:<br>
 `wget https://static.macca.cloud/qbic/client/lastest.jar -O qbic-client.jar`<br>
-<br>
 and basically, you're good to go! <br>
 `java -jar qbic-client.jar`
 
