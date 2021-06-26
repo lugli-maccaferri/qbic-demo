@@ -11,7 +11,7 @@ The configuration is much simpler, all you need to do is to specify the name of 
 	"parent": "https://authserver.macca.cloud"
 }
 ```
-**Important**: the parent value **must** be a FQDN (fully qualified domain name) in order to be verified when its public key will be sent.
+**Important**: the parent value **must** be a FQDN (fully qualified domain name) in order to be verified when its public key is sent.
 
 # More stuff about instances
 Instances are meant to be as standalone and autonomous as possible. When you first start an instance an `sqlite3` database file will be created and initialized (TODO: upload the schema).
