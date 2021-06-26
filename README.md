@@ -32,7 +32,7 @@ For example:
 ]
 ```
 Note that each node is not only independent from the others, but also independent from the authserver. This is all the configuration you need to make an instance "talk" to the authserver (and back), the only thing you have to verify is the connectivity between authserver and instances;<br><br>
-b) At boostrap time, the authserver will send to the specified nodes its public key (via HTTP);
+b) At boostrap time, the authserver will send its public key to the specified nodes (via HTTP);
 <br><br>
 c) Before initiating a request to a certain instance, a user **must** obtain a JWT token from the authserver (signed with the authserver's private key) with a simple [login request](https://github.com/lugli-maccaferri/qbic-demo/blob/main/authserver/api/auth.md#post-login);
 <br><br>
@@ -50,7 +50,7 @@ d) The JWT token will look like this:
 }
 ```
 This is all an instance needs to know about a user.
-There's a lot more to know tho, dig deeper into configuration and stuff for more information.<br>
+There's a lot more to know though, dig deeper into configuration and stuff for more information.<br>
 
 ## Installation (never tested on Windows)
 Make sure you have **at least** Java 14 installed<br>
