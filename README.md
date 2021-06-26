@@ -1,5 +1,5 @@
 # Qbic - manage your Minecraft servers with ease!
-Qbic is a Minecraft servers manager written in Java, created with the main goal to pass the OOP exam in mind; but also to provide a free alternative to [Multicraft](https://multicraft.org), which can be very expensive for somebody who's just beginning to create their own Minecraft network.
+Qbic is a Minecraft servers manager written in Java, created with the main goal to pass the OOP exam in mind, but also to provide a free alternative to [Multicraft](https://multicraft.org), which can be very expensive for somebody who's just beginning to create their own Minecraft network.
 
 
 
