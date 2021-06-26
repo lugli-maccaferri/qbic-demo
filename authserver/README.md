@@ -28,7 +28,6 @@ The configuration is pretty simple and self explanatory:
 }
 ```
 `jwt_timeout` is the interval, in seconds, during which the generated JWTs will be valid. <br>
-I think you can guess what the `mysql` object is for and we already talked about the `nodes` section, so we can move on and discuss some other matters.
-
+We already talked about the nodes section and you can guess what the mysql object does/is for, therefore we can move on and discuss other matters.
 
 # [Read the API docs for the authserver!](https://github.com/lugli-maccaferri/qbic-demo/tree/main/authserver/api)
