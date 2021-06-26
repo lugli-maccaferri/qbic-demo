@@ -1,10 +1,8 @@
 # The authserver
-Hey there, now that you read the whole introduction thing, you're ready to know more about the authserver.<br>
-Basically, all the authserver does is **authenticating users and signing JWTs**. Yeah, that's really it.
-<br>
-Because the infrastructure is "*as scalable as we could make it*", the authserver is connected to a MySQL database that contains all the user data (with "all" i mean the username, the password and their permissions on the nodes).
-<br>
-The first time is started, the authserver generates its public/private RSA keypair, which will be used to authenticate requests to instances.
+Now that you read the introduction, you are ready to know more about the authserver.<br>
+Fundamentally, all the authserver does is authenticating users and signing JWTs.<br>
+Since the infrastructure is "*as scalable as we could make it*", the authserver is connected to a MySQL database that contains all the user data: the username, the password and the permissions on the nodes.<br>
+When the authserver is started for the first time, it generates its public/private RSA keypair, which is then used to authenticate requests to instances.
 # Configuration
 The configuration is pretty simple and self explanatory:
 ```
