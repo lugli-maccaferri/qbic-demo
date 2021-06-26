@@ -67,7 +67,7 @@ and basically, you're good to go! <br>
 ### Qbic authserver
 For the authserver, make sure you have whichever `mysql-server` version after 5.7 and generate a MySQL user and database:<br>
 `sudo apt install mysql-server`<br>
-**Important**: if you're running MySQL server >= 8.x make sure you set the authentication mode to `native` to the user you're using for Qbic, since `jasync-sql` has some troubles with other modes. [Here's how to do it.](https://medium.com/@crmcmullen/how-to-run-mysql-8-0-with-native-password-authentication-502de5bac661)
+**Important**: if you're running MySQL server >= 8.x make sure you set the authentication mode to `native` to the user you're using for Qbic, since `jasync-sql` has some trouble with other modes. [Here's how to do it.](https://medium.com/@crmcmullen/how-to-run-mysql-8-0-with-native-password-authentication-502de5bac661)
 Then, download the latest Qbic authserver release:<br>
 `wget https://static.macca.cloud/qbic/authserver/lastest.jar -O qbic-authserver.jar`<br>
 and, again, everything is basically ready out of the box.
