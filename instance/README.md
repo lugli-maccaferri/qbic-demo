@@ -1,7 +1,6 @@
 
 # The instance
-Let's see what the instance is capable of.<br>
-Basically, instances are the "workers" of the architecture. On instances you can deploy and manage multiple Minecraft servers without worrying about anything concerning the authserver and other difficult and boring matters. The only thing you need to be sure of is, again, the connectivity between an instance (or *node*) and the authserver.
+Basically, instances are the "workers" of the architecture. You can deploy and manage multiple Minecraft servers on them without worrying about anything concerning the authserver and other difficult and critical matters. The only thing you need to be sure of is, again, the connectivity between an instance (or *node*) and the authserver.
 
 # Configuration
 The configuration is much simpler, all you need to do is to specify the name of the node and its parent.
